@@ -1,0 +1,39 @@
+npm i -D prisma
+npm i @prisma/client
+
+
+crear base de datos desde la terminal 
+mysql -u root -p
+CREATE DATABASE quiscoapp;
+exit;
+
+Crear variable de entorno en el archivo .env
+DATABASE_URL=mysql://root:@localhost:3306/quioscoapp
+cada vez que se crea una variable hay que bajar y levantar el servidor
+
+Abrir schema.prisma y crear modelos
+cada vez que se crea un modelo ir a la terminal y hacer migracion con
+npx prisma migrate dev
+y darle un nombre
+
+para borrar todos los datos de la base de datos
+npx prisma migrate reset
+
+Para visualizar los datos
+npx prisma studio
+
+
+añadir modelos
+crear en la carpeta prisma la carpeta data 
+y dentro de la carpeta crear los modelos
+
+dentro de la carpeta prisma añadir el archivo seed.ts 
+
+npm i ts-node
+agregar comando a package.json
+"prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+
+
+npx prisma db seed
