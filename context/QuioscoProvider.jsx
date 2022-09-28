@@ -28,7 +28,7 @@ const QuioscoProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        setCategoriaActual(categorias[4])
+        setCategoriaActual(categorias[0])
     }, [categorias])
 
     useEffect(() => {
